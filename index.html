@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="photo">
+                <figure>
+                    <img class="avatar" src="images/IMG_5045.jpg" alt="photo">
+                </figure>
+                <h1>Katsiaryna Dvorak</h1>
+                <h4>Junior Frontend developer</h4>
+            </div>
+            <div class="contact">
+                <ul>
+                    <li><b>Date of birth:</b> 24 November 1995</li>
+                    <li><b>Address:</b> Tbilisi, Razmadze street, 68</li>
+                    <li><b>Marital status:</b> Married</li>
+                    <li><b>Phone:</b> +995-571-14-72-25, +375-44-704-54-77</li>
+                    <li><b>E-mail:</b> dvorak.katsiaryna@gmail.com</li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="first-column">
+                <section class="experience">
+                    <h3><img class="icon" src="images/experience.png" alt="experience"> &nbsp; EXPERIENCE</h3>
+                    <ul>
+                        <li>Corporate Lawyer<br>
+                            2015-2021</li>
+                        <li>Learning RS School Javascript course <br>
+                            2021</li>
+                    </ul>
+                </section>
+                <section class="languages">
+                    <h3><img class="icon" src="images/languages.png" alt="languages"> &nbsp; LANGUAGES</h3>
+                    <div class="languages-circle">
+                        <div class="circle">
+                            <p>Russian<br> Native<br>100%</p>
+                        </div>
+                        <div class="circle">
+                            <p>Belarussian<br>Native<br> 100%</p>
+                        </div>
+                        <div class="circle-english">
+                            <p>English<br> Intermediate<br> 50%</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="skills">
+                    <h3><img class="icon" src="images/skills.png" alt="skills"> &nbsp; SKILLS</h3>
+                    <div class="skills-column">
+                        <div class="skills-enumeration">
+                            <ul>
+                                <li>HTML </li>
+                                <li>CSS </li>
+                                <li>Javascript </li>
+                                <li>Figma </li>
+                                <li>Photoshop </li>
+                            </ul>
+                        </div>
+                        <div class="skill-value">
+                            <ul class="skills-list">
+                                <li><img class="skill-value" src="images/five.png" alt="HTML skill"> </li>
+                                <li><img class="skill-value" src="images/four.png" alt="CSS skill"> </li>
+                                <li><img class="skill-value" src="images/four.png" alt="JS skill"> </li>
+                                <li><img class="skill-value" src="images/four.png" alt="Figma skill"> </li>
+                                <li><img class="skill-value" src="images/three.png" alt="Photoshop skill"> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" class="collapsible">Examples of my code:</button>
+                        <div class="content">
+                            <pre>
+                                <code> 
+                            
+
+class VigenereCipheringMachine {
+
+    static alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    isDirect;
+
+    constructor(isDirect) {
+        this.isDirect = isDirect;
+    }
+
+    encrypt(message, key) {
+        this.validateArguments(message, key)
+        return this.processMessage(message, key, false)
+    }
+
+    decrypt(encryptedMessage, key) {
+        this.validateArguments(encryptedMessage, key);
+        return this.processMessage(encryptedMessage, key, true)
+    }
+
+    processMessage(message, key, isDecrypt) {
+        message = message.toUpperCase();
+        key = key.toUpperCase();
+
+        let n = -1;
+        let arr = [];
+        for (let i = 0; i &lt; message.length; i++) {
+        if (VigenereCipheringMachine.alphabet.indexOf(message[i]) !== -1) {
+            n++;
+            let symbol = key[n % key.length]
+            if (isDecrypt == true) {
+            arr.push(VigenereCipheringMachine.alphabet[(VigenereCipheringMachine.alphabet.indexOf(message[i]) + 26 - VigenereCipheringMachine.alphabet.indexOf(symbol)) % 26])
+            }
+            else {
+            arr.push(VigenereCipheringMachine.alphabet[(VigenereCipheringMachine.alphabet.indexOf(message[i]) + VigenereCipheringMachine.alphabet.indexOf(symbol)) % 26])
+            }
+        } else {
+            arr.push(message[i]);
+        }
+        }
+        if (this.isDirect === false) {
+        arr = arr.reverse();
+        }
+        return arr.join('');
+    }
+
+    validateArguments(message, key) {
+        if (!message || !key) {
+        throw new Error('Error');
+        }
+    }
+}
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div>
+                        <p>You can see other examples of my code here:</p>
+                        <ul>
+                            <li><a href="https://github.com/DvorakKatsiaryna">Github</a></li>
+                            <li><a href="https://www.codewars.com/users/DvorakKatsiaryna">Codewars</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="second-column">
+                <section class="education">
+                    <h3><img class="icon" src="images/education.png" alt="education"> &nbsp; EDUCATION</h3>
+                    <ul>
+                        <li>Belarusian State University<br>
+                            Law Faculty<br>
+                            SPECIALTY (direction): Jurisprudence<br>
+                            Bachelor's degree<br>
+                            2015-2019</li>
+                        <li>The Law College of the Belarusian State University<br>
+                            SPECIALTY (direction): Jurisprudence<br>
+                            2011-2015</li>
+
+                    </ul>
+                </section>
+                <section class="qualities">
+                    <h3><img class="icon" src="images/qualities.png" alt="qualities"> &nbsp; PERSONAL QUALITIES</h3>
+                    <ul>
+                        <li>hardworking and responsible</li>
+                        <li>well with self-education</li>
+                        <li>like studying and have ability to learn fast</li>
+                    </ul>
+                    <p> My main goal is to get new skills and get a job. I am learning web development because I
+                        think
+                        it
+                        is very important part of our life.I am an expert in jurisprudence and my experience can help me
+                        to
+                        create something exciting in this sphere.</p>
+                </section>
+                <section class="interests">
+                    <h3><img class="icon" src="images/interests.png" alt="interests"> &nbsp; INTERESTS</h3>
+                    <div class="type-of-interests">
+                        <figure class="interests-img">
+                            <img class="icon-interests" src="images/reading.jpg" alt="reading">
+                            <figcaption>Reading</figcaption>
+                        </figure>
+                        <figure class="interests-img">
+                            <img class="icon-interests" src="images/travels.jpg" alt="travels">
+                            <figcaption>Travels</figcaption>
+                        </figure>
+                        <figure class="interests-img">
+                            <img class="icon-interests" src="images/swimming.jpg" alt="swimming">
+                            <figcaption>Swimming</figcaption>
+                        </figure>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <a href="https://rs.school/"><img class="logo" src="images/rs_school.svg" alt="logo"></a>
+            <a href="https://youtu.be/ZMQZUDQ273k"><img class="icon-footer" src="images/youtube.png" alt="video"></a>
+        </footer>
+    </div>
+
+    <script>
+        const collapsing_button = document.getElementsByClassName("collapsible")[0];
+        collapsing_button.addEventListener("click", function () {
+            this.classList.toggle("active");
+            let content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
