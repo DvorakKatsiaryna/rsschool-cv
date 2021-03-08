@@ -24,7 +24,9 @@
 
    JAVASCRIPT
 
-   Database
+   Figma
+
+   Photoshop
 
 7. ***Education*** 
 
